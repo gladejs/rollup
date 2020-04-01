@@ -1,6 +1,6 @@
 {
     "name": "@gladejs/rollup",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "The GladeJS Module adding support for Rollup, move along ...",
     "keywords": [
         "marko",
