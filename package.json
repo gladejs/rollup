@@ -17,6 +17,9 @@
     },
     "main": "dist/gladejs-rollup.js",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "release": {
         "plugins": [
             "@semantic-release/commit-analyzer",
