@@ -1,12 +1,10 @@
-import path from 'path'
-import glob from 'glob'
+const path = require('path')
+const glob = require('glob')
 
-import relateURL from 'relateurl'
-import { install } from 'marko/node-require'
-
+const relateURL = require('relateurl')
 const isProd = process.env.NODE_ENV === 'production'
 
-install({
+require('marko/node-require').install({
   compilerOptions: {
     writeToDisk: false, // we don't need no ".marko.js" files
     preserveWhitespace: !isProd, // minification in Production
