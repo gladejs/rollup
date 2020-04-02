@@ -1,4 +1,6 @@
-export default function (config) {
+'use strict'
+
+module.exports = function (config) {
   const bs = require('browser-sync').create()
 
   return {

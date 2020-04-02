@@ -1,4 +1,6 @@
-export default function (config) {
+'use strict'
+
+module.exports = function (config) {
   const minify = require('html-minifier').minify
 
   return {

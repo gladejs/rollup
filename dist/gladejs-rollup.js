@@ -1,10 +1,14 @@
+'use strict'
+
 const path = require('path')
 const glob = require('glob')
 
 const relateURL = require('relateurl')
+const { install } = require('marko/node-require')
+
 const isProd = process.env.NODE_ENV === 'production'
 
-require('marko/node-require').install({
+install({
   compilerOptions: {
     writeToDisk: false, // we don't need no ".marko.js" files
     preserveWhitespace: !isProd, // minification in Production
@@ -12,7 +16,7 @@ require('marko/node-require').install({
   }
 })
 
-export default function (envVar = { }) {
+module.exports = function (envVar = { }) {
   return {
     name: 'gladejs',
 
