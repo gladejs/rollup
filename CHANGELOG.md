@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/gladejs/rollup/compare/v0.1.1...v0.1.2) (2020-04-02)
+
+
+### Bug Fixes
+
+* **rollup:** we need to modify the "exports" too ([e3358c3](https://github.com/gladejs/rollup/commit/e3358c331d213191c828460c6fa17dcd347e6c01))
+
 ## [0.1.1](https://github.com/gladejs/rollup/compare/v0.1.0...v0.1.1) (2020-04-02)
 
 
