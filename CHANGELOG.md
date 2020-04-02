@@ -1,3 +1,11 @@
+## [0.1.1](https://github.com/gladejs/rollup/compare/v0.1.0...v0.1.1) (2020-04-02)
+
+
+### Bug Fixes
+
+* **ci/cd:** add the "next" branch to the CD workflow ([8eb0c1d](https://github.com/gladejs/rollup/commit/8eb0c1d0b71a43649ceca410bd39274a14342cbe))
+* **rollup:** use "requires" inside Rollup plugins ([be1e016](https://github.com/gladejs/rollup/commit/be1e0162f9e829f5e9b6f2421b1fab8e59d2951b))
+
 # [0.1.0](https://github.com/gladejs/rollup/compare/v0.0.1...v0.1.0) (2020-04-01)
 
 
