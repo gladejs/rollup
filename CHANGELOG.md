@@ -1,3 +1,11 @@
+## [0.1.3](https://github.com/gladejs/rollup/compare/v0.1.2...v0.1.3) (2020-04-06)
+
+
+### Bug Fixes
+
+* **asset:** support Windows paths for image assets ([28fd11d](https://github.com/gladejs/rollup/commit/28fd11d5e7124311a621d67b9aa263be2dca56d5))
+* **glade:** support Windows paths in JS chunking ([0dcec81](https://github.com/gladejs/rollup/commit/0dcec81da3ab7f0439fb2c184f481d483bcc92dd))
+
 ## [0.1.2](https://github.com/gladejs/rollup/compare/v0.1.1...v0.1.2) (2020-04-02)
 
 
