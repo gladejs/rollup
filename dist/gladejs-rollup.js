@@ -76,18 +76,21 @@ function listMarkoPages (inputDir) {
   }, {})
 }
 
-function gladeChunking (userChunks) {
+function gladeChunking (userChunking) {
   return (id) => {
+    const sep = path.sep
+
     if (id.endsWith('|assets')) return 'assets'
-    if (userChunks) return userChunks(id)
+    if (userChunking) return userChunking(id)
 
     else if (id.endsWith('.js') || id.endsWith('.marko')) {
-      if (id === '\0commonjsHelpers.js') return 'js/modules'
-      if (id.includes('/node_modules/raptor-util/')) return 'js/markojs'
-
       if (id.startsWith(path.resolve('components'))) return 'js/project'
-      if (id.includes('/node_modules/marko/')) return 'js/markojs'
-      if (id.includes('/node_modules/')) return 'js/modules'
+
+      if (id.includes(sep + 'node_modules' + sep + 'raptor-util' + sep)) return 'js/markojs'
+      if (id.includes(sep + 'node_modules' + sep + 'marko' + sep)) return 'js/markojs'
+
+      if (id.includes(sep + 'node_modules' + sep)) return 'js/modules'
+      if (id === '\0commonjsHelpers.js') return 'js/modules'
     }
   }
 }
