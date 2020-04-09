@@ -20,6 +20,14 @@
     "publishConfig": {
         "access": "public"
     },
+    "engines": {
+        "node": ">=10.3"
+    },
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
+    ],
     "release": {
         "plugins": [
             "@semantic-release/commit-analyzer",
