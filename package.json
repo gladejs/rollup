@@ -17,11 +17,9 @@
     },
     "main": "dist/gladejs-rollup.js",
     "license": "MIT",
-    "publishConfig": {
-        "access": "public"
-    },
     "engines": {
-        "node": ">=10.3"
+        "npm": ">=6.9.0",
+        "node": ">=10.16"
     },
     "os": [
         "darwin",
@@ -52,7 +50,8 @@
         "standard": "^14.3.3"
     },
     "peerDependencies": {
-        "marko": "^4",
-        "rollup": "^1"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
