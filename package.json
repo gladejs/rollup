@@ -50,6 +50,8 @@
         "standard": "^14.3.3"
     },
     "peerDependencies": {
+        "marko": "^4.20||^5",
+        "rollup": "^1.20||^2"
     },
     "publishConfig": {
         "access": "public"
