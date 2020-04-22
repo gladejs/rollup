@@ -105,7 +105,7 @@ function getMarkoPageId (fileId) {
 
 function listStyleAssets (bundle, pageId) {
   return Object.values(bundle).filter(entry =>
-    entry.type === 'asset' && entry.fileName.endsWith('.css')
+    entry.fileName.endsWith('.css')
   ).map(file =>
     ({
       code: file.source,
