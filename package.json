@@ -16,11 +16,11 @@
         "email": "aurelien.stebe@gmail.com"
     },
     "type": "commonjs",
-    "main": "./dist/gladejs-rollup.js",
+    "main": "./gladejs-rollup.js",
     "exports": {
-        ".": "./dist/gladejs-rollup.js",
-        "./browser-sync": "./dist/browser-sync.js",
-        "./html-minifier": "./dist/html-minifier.js"
+        ".": "./gladejs-rollup.js",
+        "./browser-sync": "./browser-sync.js",
+        "./html-minifier": "./html-minifier.js"
     },
     "license": "MIT",
     "engines": {
