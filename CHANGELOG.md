@@ -1,3 +1,19 @@
+# [0.2.0](https://github.com/gladejs/rollup/compare/v0.1.3...v0.2.0) (2020-04-28)
+
+
+### Bug Fixes
+
+* **build:** add Node version & OS support metadata ([bc6a625](https://github.com/gladejs/rollup/commit/bc6a6252335ea71a42faa2de095ec6d5e6666855))
+* **build:** update peer deps for Rollup 2 & Marko 5 ([5cde3e3](https://github.com/gladejs/rollup/commit/5cde3e3fbc5a21176d46a22662dd0dd75db27c9f))
+* **build:** update the "engines" support metadata ([1e5c27c](https://github.com/gladejs/rollup/commit/1e5c27c6e8fea57584383cee7acad6a537dc395d))
+* **rollup:** do not check the "type" of CSS & HTML ([db05ec8](https://github.com/gladejs/rollup/commit/db05ec858092cd04fdee415da7cd8c956225f878))
+* **rollup:** replace deprecated function in Rollup 2 ([0c6b7e2](https://github.com/gladejs/rollup/commit/0c6b7e2b36f8b489340ef4542325649cdae8ec07))
+
+
+### Features
+
+* **build:** support Rollup v2 & proper type metas ([0521c71](https://github.com/gladejs/rollup/commit/0521c71b494adb997b7cf5ae7755a42b7a0eced1))
+
 ## [0.1.3](https://github.com/gladejs/rollup/compare/v0.1.2...v0.1.3) (2020-04-06)
 
 
