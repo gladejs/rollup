@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/gladejs/rollup/compare/v0.2.0...v0.2.1) (2020-04-28)
+
+
+### Bug Fixes
+
+* **build:** remove the "dist" folder for NodeJS v13 ([c586d11](https://github.com/gladejs/rollup/commit/c586d11b823a6c6b37f8fd63f9537eb98fbddf34))
+
 # [0.2.0](https://github.com/gladejs/rollup/compare/v0.1.3...v0.2.0) (2020-04-28)
 
 
