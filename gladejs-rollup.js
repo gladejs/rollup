@@ -26,9 +26,11 @@ module.exports = function (envVar = { }) {
     },
 
     generateBundle (_, bundle) {
-      const assets = Object.values(bundle).find(entry => entry.name === 'assets')
-      const assetImportRegExp = new RegExp('import[^;]+/' + assets.fileName + '.;')
+      let assets = Object.values(bundle).find(entry => entry.name === 'assets')
+      if (assets === undefined) assets = { fileName: '@@undefined@@', code: '' }
+
       const assetPaths = new Function('assets', assets.code + 'return assets;')([]) // eslint-disable-line no-new-func
+      const assetRegExp = new RegExp('import[^;]+/' + assets.fileName + '["\'];')
       const assetReducer = (code, path) => code.replace(new RegExp(path[0], 'g'), path[1])
 
       Object.values(bundle).filter(entry =>
@@ -36,7 +38,7 @@ module.exports = function (envVar = { }) {
       ).forEach(file => {
         const pageId = getMarkoPageId(file.name)
         const styles = listStyleAssets(bundle, pageId)
-        const module = file.code.replace(assetImportRegExp, '').trim()
+        const module = file.code.replace(assetRegExp, '').trim()
 
         file.code = '' // Empty the Marko JS file, it will be removed from the bundle
         const data = { envVar: envVar, pageId: pageId, styles: styles, module: module }
@@ -45,7 +47,7 @@ module.exports = function (envVar = { }) {
         const rendered = template.renderToString({ $global: data })
         const htmlCode = assetPaths.reduce(assetReducer, rendered)
 
-        this.emitFile({ type: 'asset', source: htmlCode, fileName: file.name + '.html' })
+        this.emitFile({ type: 'asset', source: htmlCode, fileName: `${file.name}.html` })
       })
 
       assets.code = ''
@@ -53,7 +55,7 @@ module.exports = function (envVar = { }) {
         if (entry.code === '') delete bundle[entry.fileName]
 
         else if (entry.type === 'chunk') {
-          entry.code = entry.code.replace(assetImportRegExp, '').trim()
+          entry.code = entry.code.replace(assetRegExp, '').trim()
           entry.code = assetPaths.reduce(assetReducer, entry.code)
         }
       })
@@ -86,10 +88,10 @@ function gladeChunking (userChunking) {
     else if (id.endsWith('.js') || id.endsWith('.marko')) {
       if (id.startsWith(path.resolve('components'))) return 'js/project'
 
-      if (id.includes(sep + 'node_modules' + sep + 'raptor-util' + sep)) return 'js/markojs'
-      if (id.includes(sep + 'node_modules' + sep + 'marko' + sep)) return 'js/markojs'
+      if (id.includes(`${sep}node_modules${sep}raptor-util${sep}`)) return 'js/markojs'
+      if (id.includes(`${sep}node_modules${sep}marko${sep}`)) return 'js/markojs'
 
-      if (id.includes(sep + 'node_modules' + sep)) return 'js/modules'
+      if (id.includes(`${sep}node_modules${sep}`)) return 'js/modules'
       if (id === '\0commonjsHelpers.js') return 'js/modules'
     }
   }
