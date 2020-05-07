@@ -1,3 +1,11 @@
+## [0.2.2](https://github.com/gladejs/rollup/compare/v0.2.1...v0.2.2) (2020-05-07)
+
+
+### Bug Fixes
+
+* **asset:** support web pages without any asset ([08815b7](https://github.com/gladejs/rollup/commit/08815b73c085345b308ad3eaaa99f67d82c991e0))
+* **build:** put back the "dist" folder properly ([db35151](https://github.com/gladejs/rollup/commit/db351510f3aa6b15af6687c3c52ecd4ce05565fd))
+
 ## [0.2.1](https://github.com/gladejs/rollup/compare/v0.2.0...v0.2.1) (2020-04-28)
 
 
