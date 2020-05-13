@@ -1,3 +1,15 @@
+# [0.3.0](https://github.com/gladejs/rollup/compare/v0.2.2...v0.3.0) (2020-05-13)
+
+
+### Bug Fixes
+
+* **docs:** actually describe the repo in the README ([867a150](https://github.com/gladejs/rollup/commit/867a1502daa9368c99087589522b6744eac51e67))
+
+
+### Features
+
+* **fake:** just aligning the version number, ignore ([e7b1d4d](https://github.com/gladejs/rollup/commit/e7b1d4d07b32e0cbc4a20084acbbbe9a8706fcc4))
+
 ## [0.2.2](https://github.com/gladejs/rollup/compare/v0.2.1...v0.2.2) (2020-05-07)
 
 
