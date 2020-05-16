@@ -8,17 +8,14 @@
 ## Description
 This is the [GladeJS](https://github.com/gladejs/gladejs) Module adding support for [Rollup](https://rollupjs.org/), move along.
 
-...
-
-..
-
+...<br />
+..<br />
 .
 
 Well, if you're still here I guess that you know what you're doing. 🙄
 
 ## Content
 You'll find just 4 pieces of functionality & their related tickets in this repository :
-
  - [The main GladeJS Rollup plugin](./dist/gladejs-rollup.js), the actual core of the project
  - [The asset "transformer" hook](./tags/asset-transformer.js), the magic to handle your images
  - [The "browser-sync" Rollup plugin](./dist/browser-sync.js) I wrote since I couldn't find any
