@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/gladejs/rollup/compare/v0.3.0...v0.3.1) (2020-05-22)
+
+
+### Bug Fixes
+
+* **marko:** make sure our taglib is registered ([7630dba](https://github.com/gladejs/rollup/commit/7630dba2c8a0d5df0712a7be31b22786112f3ff2))
+
 # [0.3.0](https://github.com/gladejs/rollup/compare/v0.2.2...v0.3.0) (2020-05-13)
 
 
