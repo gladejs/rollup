@@ -4,16 +4,18 @@ const path = require('path')
 const glob = require('glob')
 
 const relateURL = require('relateurl')
-const { install } = require('marko/node-require')
+const markoLoader = require('marko').load
 
+const compiler = require('marko/compiler')
 const isProd = process.env.NODE_ENV === 'production'
 
-install({
-  compilerOptions: {
-    writeToDisk: false, // we don't need no ".marko.js" files
-    preserveWhitespace: !isProd, // minification in Production
-    ignoreUnrecognizedTags: true // error-free Web Components
-  }
+// Making sure the "glade-rollup" taglib is registered.
+compiler.registerTaglib(require.resolve('../marko.json'))
+
+compiler.configure({
+  writeToDisk: false, // we don't need no ".marko.js" files
+  preserveWhitespace: !isProd, // minification in Production
+  ignoreUnrecognizedTags: true // error-free Web Components
 })
 
 module.exports = function (envVar = { }) {
@@ -116,17 +118,16 @@ function listStyleAssets (bundle, pageId) {
   )
 }
 
-function getMarkoFacade (moduleId) {
-  const tagIndex = moduleId.indexOf(':')
-  const pagePath = moduleId.substring(tagIndex + 1)
-
-  delete require.cache[pagePath]
-  return require(pagePath)
-}
-
 function getRelativePath (from, to) {
   const options = { output: relateURL.PATH_RELATIVE }
   const relative = relateURL.relate('//x' + from, to, options)
 
   return relative.startsWith('.') ? relative : './' + relative
+}
+
+function getMarkoFacade (moduleId) {
+  const tagIndex = moduleId.indexOf(':')
+  const pagePath = moduleId.substring(tagIndex + 1)
+
+  return markoLoader(pagePath)
 }
