@@ -3,8 +3,9 @@
     "version": "0.3.1",
     "description": "The GladeJS Module adding support for Rollup, move along ...",
     "keywords": [
+        "gladejs",
         "marko",
-        "rollup",
+        "rollup-plugin",
         "browser-sync",
         "html-minifier"
     ],
