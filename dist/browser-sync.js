@@ -5,6 +5,7 @@ module.exports = function (config) {
 
   return {
     name: 'browser-sync',
+
     writeBundle () {
       if (!bs.active) bs.init(config)
     }

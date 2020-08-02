@@ -5,6 +5,7 @@ module.exports = function (config) {
 
   return {
     name: 'html-minifier',
+
     generateBundle (_, bundle) {
       Object.values(bundle).filter(entry =>
         entry.fileName.endsWith('.html')
