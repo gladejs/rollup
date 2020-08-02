@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/gladejs/rollup/compare/v0.3.1...v0.3.2) (2020-08-02)
+
+
+### Bug Fixes
+
+* **deps:** update browser-sync & chokidar to v3.x ([e8e64f2](https://github.com/gladejs/rollup/commit/e8e64f2b14fea34871a79531f18f24de2503c9fd))
+
 ## [0.3.1](https://github.com/gladejs/rollup/compare/v0.3.0...v0.3.1) (2020-05-22)
 
 
