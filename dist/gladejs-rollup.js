@@ -129,5 +129,6 @@ function getMarkoFacade (moduleId) {
   const tagIndex = moduleId.indexOf(':')
   const pagePath = moduleId.substring(tagIndex + 1)
 
+  delete require.cache[pagePath + '.js']
   return markoLoader(pagePath)
 }
