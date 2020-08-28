@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/gladejs/rollup/compare/v0.3.2...v0.3.3) (2020-08-28)
+
+
+### Bug Fixes
+
+* **live:** support Rollup Live mode ( "--watch" ) ([ac79031](https://github.com/gladejs/rollup/commit/ac790312ed3ab602b75d7d2fa7f9c0f3b48b025b))
+
 ## [0.3.2](https://github.com/gladejs/rollup/compare/v0.3.1...v0.3.2) (2020-08-02)
 
 
