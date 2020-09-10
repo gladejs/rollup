@@ -6,10 +6,10 @@
 [![NPM Version](https://img.shields.io/npm/v/@gladejs/rollup)](https://www.npmjs.com/package/@gladejs/rollup)
 
 ## Description
-This is the [GladeJS](https://github.com/gladejs/gladejs) Module adding support for [Rollup](https://rollupjs.org/), move along.
+This is the [GladeJS](https://github.com/gladejs/gladejs) Module adding support for [Rollup](https://rollupjs.org), move along.
 
-...<br />
-..<br />
+...<br/>
+..<br/>
 .
 
 Well, if you're still here I guess that you know what you're doing. 🙄
