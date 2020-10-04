@@ -15,7 +15,7 @@ compiler.registerTaglib(require.resolve('../marko.json'))
 compiler.configure({
   writeToDisk: false, // we don't need no ".marko.js" files
   preserveWhitespace: !isProd, // minification in Production
-  ignoreUnrecognizedTags: true // error-free Web Components
+  ignoreUnrecognizedTags: !isProd // error-free Live Dev Mode
 })
 
 module.exports = function (envVar = { }) {
