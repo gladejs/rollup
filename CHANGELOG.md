@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/gladejs/rollup/compare/v0.4.0...v0.4.1) (2020-10-05)
+
+
+### Bug Fixes
+
+* **asset:** compiler API updates in v5.0.0-next.49 ([f7864e0](https://github.com/gladejs/rollup/commit/f7864e03334d3592e683f466f1eeefd8b61345ce))
+
 # [0.4.0](https://github.com/gladejs/rollup/compare/v0.3.3...v0.4.0) (2020-10-05)
 
 
