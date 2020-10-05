@@ -1,3 +1,16 @@
+# [0.4.0](https://github.com/gladejs/rollup/compare/v0.3.3...v0.4.0) (2020-10-05)
+
+
+### Bug Fixes
+
+* **marko:** tweak the Marko compiler options ([b4cd205](https://github.com/gladejs/rollup/commit/b4cd205b6a7e2d1a977de9f8f5ce020180c45e32))
+
+
+### Features
+
+* **asset:** support Marko v5 transformer syntax ([22a2391](https://github.com/gladejs/rollup/commit/22a23910cea518a9a31b06d5d600d1f2be7e41b6))
+* **marko:** support for the Marko v5 compiler ([43c1d23](https://github.com/gladejs/rollup/commit/43c1d237c07f7c05415f6a2e103dad877e3d1795))
+
 ## [0.3.3](https://github.com/gladejs/rollup/compare/v0.3.2...v0.3.3) (2020-08-28)
 
 
