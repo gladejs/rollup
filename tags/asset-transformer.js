@@ -30,11 +30,11 @@ function transformMarko5 (path, file) {
     const sourcePath = srcAttr.value.value
 
     if (sourcePath.startsWith('.')) {
-      const systemPath = getSystemPath(file.opts.filename, sourcePath)
+      const systemPath = getSystemPath(file.opts.sourceFileName, sourcePath)
       srcAttr.value = babelTypes.types.stringLiteral(systemPath)
 
-      if (file._markoOptions.output === 'vdom') {
-        file.metadata.marko.deps.push(getDependency(file.opts.filename, systemPath))
+      if (file.markoOpts.output === 'vdom') {
+        file.metadata.marko.deps.push(getDependency(file.opts.sourceFileName, systemPath))
       }
     }
   }
