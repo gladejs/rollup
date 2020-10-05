@@ -3,10 +3,12 @@
 const path = require('path')
 const glob = require('glob')
 
-const relateURL = require('relateurl')
-const markoLoader = require('marko').load
+require('marko/node-require')
 
+const relateURL = require('relateurl')
 const compiler = require('marko/compiler')
+
+const isMarko4 = Boolean(compiler.builder)
 const isProd = process.env.NODE_ENV === 'production'
 
 // Making sure the "glade-rollup" taglib is registered.
@@ -130,5 +132,7 @@ function getMarkoFacade (moduleId) {
   const pagePath = moduleId.substring(tagIndex + 1)
 
   delete require.cache[pagePath + '.js']
-  return markoLoader(pagePath)
+  const module = require(pagePath)
+
+  return isMarko4 ? module : module.default
 }
