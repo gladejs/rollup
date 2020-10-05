@@ -3,25 +3,56 @@
 const path = require('path')
 const normalize = require('normalize-path')
 
-module.exports = function transform (el, context) {
+module.exports = function transform (a, b) {
+  return a.hub ? transformMarko5(a, a.hub.file) : transformMarko4(a, b)
+}
+
+function transformMarko4 (el, context) {
   if (el.hasAttribute('src') && el.getAttributeValue('src').type === 'Literal') {
-    let assetPath = el.getAttributeValue('src').value
+    const sourcePath = el.getAttributeValue('src').value
 
-    if (assetPath.startsWith('.')) {
-      assetPath = path.resolve(path.dirname(context.filename), assetPath)
-      assetPath = normalize(assetPath).replace(/^([a-zA-Z]+:|\.\/)/, '')
+    if (sourcePath.startsWith('.')) {
+      const systemPath = getSystemPath(context.filename, sourcePath)
+      el.setAttributeValue('src', context.builder.literal(systemPath))
 
-      el.setAttributeValue('src', context.builder.literal(assetPath))
-
-      let assetCode = "import assetPath from '" + assetPath + "'; "
-      assetCode += "assets.push(['" + assetPath + "', assetPath]);"
-
-      context.addDependency({
-        type: 'asset',
-        code: assetCode,
-        path: context.filename,
-        virtualPath: assetPath + '|assets'
-      })
+      if (context.outputType === 'vdom') {
+        context.addDependency(getDependency(context.filename, systemPath))
+      }
     }
+  }
+}
+
+function transformMarko5 (path, file) {
+  const babelTypes = require('@marko/babel-types')
+  const srcAttr = path.node.attributes.find(attr => attr.name === 'src')
+
+  if (srcAttr && srcAttr.value.type === 'StringLiteral') {
+    const sourcePath = srcAttr.value.value
+
+    if (sourcePath.startsWith('.')) {
+      const systemPath = getSystemPath(file.opts.filename, sourcePath)
+      srcAttr.value = babelTypes.types.stringLiteral(systemPath)
+
+      if (file._markoOptions.output === 'vdom') {
+        file.metadata.marko.deps.push(getDependency(file.opts.filename, systemPath))
+      }
+    }
+  }
+}
+
+function getSystemPath (markoPath, assetPath) {
+  const resolvedPath = path.resolve(path.dirname(markoPath), assetPath)
+  return normalize(resolvedPath).replace(/^([a-zA-Z]+:|\.\/)/, '')
+}
+
+function getDependency (markoPath, assetPath) {
+  const assetCode = `import assetPath from '${assetPath}';\n` +
+                    `assets.push(['${assetPath}', assetPath]);`
+
+  return {
+    type: 'asset',
+    code: assetCode,
+    path: markoPath,
+    virtualPath: assetPath + '|assets'
   }
 }
