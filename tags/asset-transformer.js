@@ -28,7 +28,7 @@ function transformMarko4(el, context) {
 }
 
 function transformMarko5(path, file) {
-    const babelTypes = require('@marko/babel-types')
+    const babelTypes = require('@marko/babel-types') // eslint-disable-line node/no-missing-require
     const srcAttr = path.node.attributes.find((attr) => attr.name === 'src')
 
     if (srcAttr && srcAttr.value.type === 'StringLiteral') {

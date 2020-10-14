@@ -32,10 +32,11 @@ module.exports = function (envVar = {}) {
         generateBundle(_, bundle) {
             const assets = getAssetsEntry(bundle)
 
+            // eslint-disable-next-line no-new-func
             const assetPaths = new Function(
                 'assets',
                 assets.code + 'return assets;'
-            )([]) // eslint-disable-line no-new-func
+            )([])
 
             const assetRegExp = new RegExp(
                 'import[^;]+/' + assets.fileName + '["\'];'
