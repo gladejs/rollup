@@ -1,9 +1,40 @@
 # GladeJS Rollup Module
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![GitHub License](https://img.shields.io/github/license/gladejs/rollup)](./LICENSE)
-[![NPM Version](https://img.shields.io/npm/v/@gladejs/rollup)](https://www.npmjs.com/package/@gladejs/rollup)
+<p>
+    <a href="https://www.npmjs.com/package/@gladejs/rollup" rel="nofollow">
+        <img alt="NPM Version" src="https://badgen.net/npm/v/@gladejs/rollup">
+    </a>
+    &nbsp;
+    <a href="https://github.com/prettier/prettier">
+        <img alt="Code Formatter" src="https://badgen.net/badge/code%20format/prettier/ff69b4">
+    </a>
+    &nbsp;
+    <a href="https://standardjs.com" rel="nofollow">
+        <img alt="JavaScript Style" src="https://badgen.net/badge/code%20style/standard/green">
+    </a>
+    &nbsp;
+    <a href="https://github.com/semantic-release/semantic-release">
+        <img alt="Semantic Release" src="https://badgen.net/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80/semantic-release/e10079">
+    </a>
+</p>
+
+<p>
+    <a href="https://github.com/gladejs/rollup/releases">
+        <img alt="Latest Release" src="https://badgen.net/github/release/gladejs/rollup">
+    </a>
+    &nbsp;
+    <a href="https://github.com/gladejs/rollup/actions">
+        <img alt="Actions Checks" src="https://badgen.net/github/checks/gladejs/rollup">
+    </a>
+    &nbsp;
+    <a href="https://github.com/gladejs/rollup/blob/master/LICENSE">
+        <img alt="GitHub License" src="https://badgen.net/github/license/gladejs/rollup">
+    </a>
+    &nbsp;
+    <a href="https://github.com/gladejs/rollup/commits/next">
+        <img alt="Latest Commits" src="https://badgen.net/github/last-commit/gladejs/rollup/next">
+    </a>
+</p>
 
 ## Description
 
