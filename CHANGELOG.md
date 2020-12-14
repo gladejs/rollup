@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/gladejs/rollup/compare/v0.4.1...v0.4.2) (2020-12-14)
+
+
+### Bug Fixes
+
+* **deps:** refresh dependencies & force a release ([0cae854](https://github.com/gladejs/rollup/commit/0cae854e1bce435d8beb776f6443a657b8886ce6))
+
 ## [0.4.1](https://github.com/gladejs/rollup/compare/v0.4.0...v0.4.1) (2020-10-05)
 
 
