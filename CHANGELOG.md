@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/gladejs/rollup/compare/v0.4.2...v0.5.0) (2020-12-27)
+
+
+### Features
+
+* **build:** archive & move to the GladeJS monorepo ([dbac0b2](https://github.com/gladejs/rollup/commit/dbac0b2324a3265e85563744887b079df3206694))
+
 ## [0.4.2](https://github.com/gladejs/rollup/compare/v0.4.1...v0.4.2) (2020-12-14)
 
 
