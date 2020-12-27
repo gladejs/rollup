@@ -1,4 +1,4 @@
-# GladeJS Rollup Module
+# GladeJS Rollup Module ([Moved to GladeJS](https://github.com/gladejs/gladejs))
 
 <p>
     <a href="https://www.npmjs.com/package/@gladejs/rollup" rel="nofollow">
